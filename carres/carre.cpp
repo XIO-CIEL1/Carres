@@ -1,5 +1,5 @@
 // TP 6 carrés animés 
-// Fonction main du projet
+// Fonction prototype du projet
 // date : 03/12/2024
 // utilisateur : XIONG Tom
 
@@ -8,6 +8,8 @@
 #include <iostream>
 
 using namespace std;
+
+// prototypes 
 
 int CCarre::GetSx() const
 {
@@ -42,5 +44,34 @@ void CCarre::Setcote(unsigned int cote1)
 void CCarre::Afficher()
 {
     cout << " sx :" << this->sx << "sy :" << this->sy << " cote :" << this->cote;
+}
+
+void CCarre::Deplacer(char direction, int saut)
+{
+    // Selon la direction, 
+    // on modifie les coordonnées sx et sy
+    switch (direction) 
+    {
+    case 'n':  // Nord
+        // Déplacer vers le haut (soustraire sy)
+        sy -= saut;  
+        break;
+    case 's':  // Sud
+        // Déplacer vers le bas (augmenter sy)
+        sy += saut;  
+        break;
+    case 'o':  // Ouest
+        // Déplacer vers la gauche (soustraire sx)
+        sx -= saut;  
+        break;
+    case 'e':  // Est
+        // Déplacer vers la droite (augmenter sx)
+        sx += saut;  
+        break;
+    default:
+        std::cout << "Direction non valide." << std::endl;
+        break;
+    }
+   
 }
 
