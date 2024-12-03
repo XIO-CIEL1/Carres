@@ -7,7 +7,9 @@
 #include "carre.h"
 #include <iostream>
 
+int main()
+{
 
-int main() {
-   
-    CCarre carre1(10, 20, 30);
+
+
+}
