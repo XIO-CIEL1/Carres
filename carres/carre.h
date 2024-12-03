@@ -5,14 +5,3 @@
 
 #pragma once
 
-class CCarre
-{
-private:
-    int sx;   
-    int sy;   
-   unsigned int cote; 
-
-public:
-   
-    CCarre(int x, int y, int c);
-};
